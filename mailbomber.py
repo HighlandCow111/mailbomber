@@ -12,23 +12,23 @@ import sys
 import time
 
 
-print '    '
+print ('    ')
 email = raw_input('Attacker Gmail Address : ')
-print '             '
+print ('             ')
 user = raw_input('Anonymous name : ')
-print '      '
+print ('      ')
 passwd = getpass.getpass('Password: ')
 
-print '   '
+print ('   ')
 
 to = raw_input('\nTo: ')
 
 
-print '    '
+print ('    ')
 
 body = raw_input('Message: ')
 
-print '    '
+print ('    ')
 
 total = input('Number of send: ')
 
@@ -36,7 +36,7 @@ smtp_server = 'smtp.gmail.com'
 port = 587
 
 
-print ''
+print ('')
 
 try:
     server = smtplib.SMTP(smtp_server,port) 
@@ -51,10 +51,10 @@ try:
         time.sleep(1)
         sys.stdout.flush()
     server.quit()
-    print '\n Done !!!'
+    print ('\n Done !!!')
 except KeyboardInterrupt:
-    print '[-] Canceled'
+    print ('[-] Canceled')
     sys.exit()
 except smtplib.SMTPAuthenticationError:
-    print '\n[!] The username or password you entered is incorrect.'
+    print ('\n[!] The username or password you entered is incorrect.')
     sys.exit()
